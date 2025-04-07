@@ -1,0 +1,32 @@
+﻿Name,Path,Contract Name,Function,Type,Description
+Hpay,Data/HPay.sol,MintableAutoCompundRelockBonus,setToken,PotentiallyVulnerable,Vulnerable function lacks roles
+Uerii,Data/Uerii.sol,Token,mint,PotentiallyVulnerable,Vulnerable function lacks roles
+Reaper_Farm,Data/Reaper_Farm.sol,ReaperVaultV2,withdraw,PotentiallyVulnerable,Vulnerable function lacks roles
+GYMNetwork,Data/GYMNetwork.sol,GymSinglePool,depositFromOtherContract,PotentiallyVulnerable,Vulnerable function lacks roles
+Templedao,Data/Templedao.sol,StaxLPStaking,migrateStake,PotentiallyVulnerable,Vulnerable function lacks roles
+Sandbox_LAND,Data/Sandbox_LAND.sol,ERC721BaseToken,_burn,PotentiallyVulnerable,Vulnerable function lacks roles
+Rikkei_Finance,Data/Rikkei_Finance.sol,SimplePriceOracle,setOracleData,PotentiallyVulnerable,Vulnerable function lacks roles
+Bancor_Protocol,Data/Bancor_Protocol.sol,TokenHandler,safeTransferFrom,PotentiallyVulnerable,Vulnerable function lacks roles
+88mph,Data/88mph.sol,NFT,init,PotentiallyVulnerable,Vulnerable function lacks roles
+SpaceGodzilla,Data/SpaceGodzilla.sol,SpaceGodzilla,swapAndLiquifyStepv1,PotentiallyVulnerable,Vulnerable function lacks roles
+88mph_nv1,Data/88mph.sol,NFT,setBaseURI,AST_Modifier,onlyOwner
+88mph_nv2,Data/88mph.sol,NFT,mint,AST_Modifier,onlyOwner
+Bancor_Protocol_nv1,Data/Bancor_Protocol.sol,Owned,acceptOwnership,RoleCheck,"require:msg.sender == newOwner, ""ERR_ACCESS_DENIED"""
+Bancor_Protocol_nv2,Data/Bancor_Protocol.sol,Owned,transferOwnership,AST_Modifier,ownerOnly
+GYMNetwork_nv1,Data/GYMNetwork.sol,GymSinglePool,setPoolInfo,AST_Modifier,onlyOwner
+GYMNetwork_nv2,Data/GYMNetwork.sol,GymSinglePool,setTreasuryAddress,AST_Modifier,onlyOwner
+Hpay_nv1,Data/HPay.sol,MintableAutoCompundRelockBonus,setStartTime,AST_Modifier,onlyRole(DEFAULT_ADMIN_ROLE)
+Hpay_nv2,Data/HPay.sol,MintableAutoCompundRelockBonus,setRewardRate,AST_Modifier,onlyRole(DEFAULT_ADMIN_ROLE)
+Reaper_Farm_nv1,Data/Reaper_Farm.sol,ReaperVaultV2,setEmergencyShutdown,PotentiallyVulnerable,Vulnerable function lacks roles
+Reaper_Farm_nv2,Data/Reaper_Farm.sol,ReaperVaultV2,inCaseTokensGetStuck,PotentiallyVulnerable,Vulnerable function lacks roles
+Sandbox_LAND_nv1,Data/Sandbox_LAND.sol,ERC721BaseToken,approve,RoleCheck,"require:owner == msg.sender ||
+            _superOperators[msg.sender] ||
+            _operatorsForAll[owner][msg.sender],
+            ""not authorized to approve"""
+Sandbox_LAND_nv2,Data/Sandbox_LAND.sol,ERC721BaseToken,transferFrom,RoleCheck,"require:_checkOnERC721Received(metaTx ? from : msg.sender, from, to, id, """""
+SpaceGodzilla_nv1,Data/SpaceGodzilla.sol,Ownable,transferOwnership,AST_Modifier,onlyOwner
+SpaceGodzilla_nv2,Data/SpaceGodzilla.sol,SpaceGodzilla,rescueToken,RoleCheck,"require:_tokenOwner == msg.sender"
+Templedao_nv1,Data/Templedao.sol,StaxLPStaking,setRewardDistributor,AST_Modifier,onlyOwner
+Templedao_nv2,Data/Templedao.sol,StaxLPStaking,migrateWithdraw,AST_Modifier,onlyMigrator
+Uerii_nv1,Data/Uerii.sol,ERC20,approve,PotentiallyVulnerable,Vulnerable function lacks roles
+Uerii_nv2,Data/Uerii.sol,ERC20,transfer,PotentiallyVulnerable,Vulnerable function lacks roles

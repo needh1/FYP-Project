@@ -1,0 +1,327 @@
+Path,Type,Functions,Role,isOZ
+./Data/Reaper_Farm.sol,PotentiallyVulnerable,depositAll,Public/external function without role checks,True
+./Data/Reaper_Farm.sol,PotentiallyVulnerable,deposit,Public/external function without role checks,True
+./Data/Reaper_Farm.sol,PotentiallyVulnerable,mint,Public/external function without role checks,True
+./Data/Reaper_Farm.sol,PotentiallyVulnerable,withdraw,Public/external function without role checks,True
+./Data/Reaper_Farm.sol,PotentiallyVulnerable,redeemAll,Public/external function without role checks,True
+./Data/Reaper_Farm.sol,PotentiallyVulnerable,redeem,Public/external function without role checks,True
+./Data/Reaper_Farm.sol,PotentiallyVulnerable,addStrategy,Public/external function without role checks,True
+./Data/Reaper_Farm.sol,PotentiallyVulnerable,updateStrategyAllocBPS,Public/external function without role checks,True
+./Data/Reaper_Farm.sol,PotentiallyVulnerable,revokeStrategy,Public/external function without role checks,True
+./Data/Reaper_Farm.sol,PotentiallyVulnerable,setWithdrawalQueue,Public/external function without role checks,True
+./Data/Reaper_Farm.sol,PotentiallyVulnerable,report,Public/external function without role checks,True
+./Data/Reaper_Farm.sol,PotentiallyVulnerable,updateWithdrawMaxLoss,Public/external function without role checks,True
+./Data/Reaper_Farm.sol,PotentiallyVulnerable,updateTvlCap,Public/external function without role checks,True
+./Data/Reaper_Farm.sol,PotentiallyVulnerable,removeTvlCap,Public/external function without role checks,True
+./Data/Reaper_Farm.sol,PotentiallyVulnerable,setEmergencyShutdown,Public/external function without role checks,True
+./Data/Reaper_Farm.sol,PotentiallyVulnerable,inCaseTokensGetStuck,Public/external function without role checks,True
+./Data/Reaper_Farm.sol,PotentiallyVulnerable,setLockedProfitDegradation,Public/external function without role checks,True
+./Data/Reaper_Farm.sol,Require,addStrategy,"!emergencyShutdown, ""Cannot add a strategy during emergency shutdown"""
+./Data/Reaper_Farm.sol,Require,addStrategy,strategy != address(0
+./Data/Reaper_Farm.sol,Require,addStrategy,"strategies[strategy].activation == 0, ""Strategy must not be added already"""
+./Data/Reaper_Farm.sol,Require,addStrategy,address(this
+./Data/Reaper_Farm.sol,Require,addStrategy,asset == IStrategy(strategy
+./Data/Reaper_Farm.sol,Require,addStrategy,"allocBPS + totalAllocBPS <= PERCENT_DIVISOR, ""Total allocation points are over 100%"""
+./Data/Reaper_Farm.sol,Require,updateStrategyAllocBPS,"strategies[strategy].activation != 0, ""Strategy must be active"""
+./Data/Reaper_Farm.sol,Require,updateStrategyAllocBPS,"totalAllocBPS <= PERCENT_DIVISOR, ""Total allocation points are over 100%"""
+./Data/Reaper_Farm.sol,Require,setWithdrawalQueue,"queueLength != 0, ""Cannot set an empty withdrawal queue"""
+./Data/Reaper_Farm.sol,Require,setWithdrawalQueue,"params.activation != 0, ""Can only use active strategies in the withdrawal queue"""
+./Data/Reaper_Farm.sol,Require,report,"strategy.activation != 0, ""Only active strategies can report"""
+./Data/Reaper_Farm.sol,Require,updateWithdrawMaxLoss,"_withdrawMaxLoss <= PERCENT_DIVISOR, ""withdrawMaxLoss cannot be greater than 100%"""
+./Data/Reaper_Farm.sol,Require,inCaseTokensGetStuck,"token != asset, ""!asset"""
+./Data/Reaper_Farm.sol,Require,setLockedProfitDegradation,"degradation <= DEGRADATION_COEFFICIENT, ""Degradation cannot be more than 100%"""
+./Data/Uerii.sol,PotentiallyVulnerable,transfer,Public/external function without role checks,False
+./Data/Uerii.sol,PotentiallyVulnerable,approve,Public/external function without role checks,False
+./Data/Uerii.sol,PotentiallyVulnerable,transferFrom,Public/external function without role checks,False
+./Data/Uerii.sol,PotentiallyVulnerable,increaseAllowance,Public/external function without role checks,False
+./Data/Uerii.sol,PotentiallyVulnerable,decreaseAllowance,Public/external function without role checks,False
+./Data/Uerii.sol,PotentiallyVulnerable,mint,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,approve,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,transfer,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,transferFrom,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,permit,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,mint,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,burn,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,swap,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,skim,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,sync,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,initialize,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,createPair,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,setFeeTo,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,setFeeToSetter,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,AST_Modifier,renounceOwnership,onlyOwner,False
+./Data/SpaceGodzilla.sol,AST_Modifier,transferOwnership,onlyOwner,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,transferFromm,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,increaseAllowance,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,decreaseAllowance,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,withdraw,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,addTokenldx,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,addLiquidity,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,addLiquidityETH,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,removeLiquidity,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,removeLiquidityETH,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,removeLiquidityWithPermit,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,removeLiquidityETHWithPermit,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,swapExactTokensForTokens,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,swapTokensForExactTokens,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,swapExactETHForTokens,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,swapTokensForExactETH,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,swapExactTokensForETH,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,swapETHForExactTokens,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,removeLiquidityETHSupportingFeeOnTransferTokens,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,removeLiquidityETHWithPermitSupportingFeeOnTransferTokens,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,swapExactTokensForTokensSupportingFeeOnTransferTokens,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,swapExactETHForTokensSupportingFeeOnTransferTokens,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,swapExactTokensForETHSupportingFeeOnTransferTokens,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,receive,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,AST_Modifier,updateUniswapV2Router,onlyOwner,False
+./Data/SpaceGodzilla.sol,AST_Modifier,excludeFromFees,onlyOwner,False
+./Data/SpaceGodzilla.sol,AST_Modifier,excludeMultipleAccountsFromFees,onlyOwner,False
+./Data/SpaceGodzilla.sol,AST_Modifier,setSwapTokensAtAmount,onlyOwner,False
+./Data/SpaceGodzilla.sol,AST_Modifier,changeSwapWarp,onlyOwner,False
+./Data/SpaceGodzilla.sol,AST_Modifier,addOtherTokenPair,onlyOwner,False
+./Data/SpaceGodzilla.sol,AST_Modifier,changeDistribution,onlyOwner,False
+./Data/SpaceGodzilla.sol,AST_Modifier,warpWithdraw,onlyOwner,False
+./Data/SpaceGodzilla.sol,AST_Modifier,warpaddTokenldx,onlyOwner,False
+./Data/SpaceGodzilla.sol,AST_Modifier,setSwapAndLiquifyEnabled,onlyOwner,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,swapAndLiquify,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,swapTokensForOther,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,swapAndLiquifyStepv1,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,PotentiallyVulnerable,rescueToken,Public/external function without role checks,False
+./Data/SpaceGodzilla.sol,RoleModifier,onlyOwner,Role-based access control modifier,False
+./Data/SpaceGodzilla.sol,Require,rescueToken,_tokenOwner == msg.sender
+./Data/SpaceGodzilla.sol,RoleCheck,rescueToken,require:_tokenOwner == msg.sender
+./Data/SpaceGodzilla.sol,ModifierDefinition,onlyOwner,"
+        require(_owner == _msgSender() , ""Ownable..."
+./Data/GYMNetwork.sol,PotentiallyVulnerable,receive,Public/external function without role checks,False
+./Data/GYMNetwork.sol,PotentiallyVulnerable,fallback,Public/external function without role checks,False
+./Data/GYMNetwork.sol,PotentiallyVulnerable,initialize,Public/external function without role checks,False
+./Data/GYMNetwork.sol,AST_Modifier,setPoolInfo,onlyOwner,False
+./Data/GYMNetwork.sol,AST_Modifier,updateStartBlock,onlyOwner,False
+./Data/GYMNetwork.sol,AST_Modifier,setMLMAddress,onlyOwner,False
+./Data/GYMNetwork.sol,AST_Modifier,setTokenAddress,onlyOwner,False
+./Data/GYMNetwork.sol,AST_Modifier,setVaultContractAddress,onlyOwner,False
+./Data/GYMNetwork.sol,AST_Modifier,setFarmingContractAddress,onlyOwner,False
+./Data/GYMNetwork.sol,AST_Modifier,setRelationshipReward,onlyOwner,False
+./Data/GYMNetwork.sol,AST_Modifier,setOnlyRunnerScript,onlyOwner,False
+./Data/GYMNetwork.sol,AST_Modifier,setGymWBNBPair,onlyOwner,False
+./Data/GYMNetwork.sol,AST_Modifier,setPancakeRouterAddress,onlyOwner,False
+./Data/GYMNetwork.sol,AST_Modifier,setIsPoolActive,onlyOwner,False
+./Data/GYMNetwork.sol,AST_Modifier,setIsInMigrationToVTwo,onlyOwner,False
+./Data/GYMNetwork.sol,AST_Modifier,setHolderRewardContractAddress,onlyOwner,False
+./Data/GYMNetwork.sol,AST_Modifier,setWbnbAndUSDTTokenArray,onlyOwner,False
+./Data/GYMNetwork.sol,AST_Modifier,setUnlockedTimestampQualification,onlyOwner,False
+./Data/GYMNetwork.sol,AST_Modifier,setLevels,onlyOwner,False
+./Data/GYMNetwork.sol,AST_Modifier,setTreasuryAddress,onlyOwner,False
+./Data/GYMNetwork.sol,PotentiallyVulnerable,deposit,Public/external function without role checks,False
+./Data/GYMNetwork.sol,PotentiallyVulnerable,depositFromOtherContract,Public/external function without role checks,False
+./Data/GYMNetwork.sol,PotentiallyVulnerable,withdraw,Public/external function without role checks,False
+./Data/GYMNetwork.sol,PotentiallyVulnerable,claim,Public/external function without role checks,False
+./Data/GYMNetwork.sol,AST_Modifier,transferPoolRewards,onlyRunnerScript,False
+./Data/GYMNetwork.sol,PotentiallyVulnerable,updatePool,Public/external function without role checks,False
+./Data/GYMNetwork.sol,PotentiallyVulnerable,claimAll,Public/external function without role checks,False
+./Data/GYMNetwork.sol,PotentiallyVulnerable,claimAndReinvest,Public/external function without role checks,False
+./Data/GYMNetwork.sol,PotentiallyVulnerable,refreshMyLevel,Public/external function without role checks,False
+./Data/GYMNetwork.sol,PotentiallyVulnerable,switchToUnlocked,Public/external function without role checks,False
+./Data/GYMNetwork.sol,Require,deposit,"isPoolActive,'Contract is not running yet'"
+./Data/GYMNetwork.sol,Require,withdraw,"_depositId >= 0, ""Value is not specified"""
+./Data/GYMNetwork.sol,Require,claim,"_depositId >= 0, ""Value is not specified"""
+./Data/GYMNetwork.sol,Require,claimAndReinvest,"isPoolActive,'Contract is not running yet'"
+./Data/GYMNetwork.sol,Require,switchToUnlocked,"depositDetails.depositTimestamp <= unlockedTimestampQualification,'Function is only for Users that deposited before Unlocked Staking Upgrade'"
+./Data/MetaDragon.sol,PotentiallyVulnerable,batchSetAllowlist,Public/external function without role checks,False
+./Data/MetaDragon.sol,PotentiallyVulnerable,transferFrom,Public/external function without role checks,False
+./Data/MetaDragon.sol,PotentiallyVulnerable,approve,Public/external function without role checks,False
+./Data/MetaDragon.sol,PotentiallyVulnerable,setApproveForAll,Public/external function without role checks,False
+./Data/MetaDragon.sol,PotentiallyVulnerable,safeTransferFrom,Public/external function without role checks,False
+./Data/MetaDragon.sol,PotentiallyVulnerable,mint,Public/external function without role checks,False
+./Data/MetaDragon.sol,PotentiallyVulnerable,mintNFT,Public/external function without role checks,False
+./Data/MetaDragon.sol,PotentiallyVulnerable,receive,Public/external function without role checks,False
+./Data/MetaDragon.sol,Require,batchSetAllowlist,"owner == msg.sender, ""META: no owner"""
+./Data/MetaDragon.sol,RoleCheck,batchSetAllowlist,"require:owner == msg.sender, ""META: no owner"""
+./Data/MetaDragon.sol,Require,safeTransferFrom,iERC721CheckAuth(erc721
+./Data/MetaDragon.sol,Require,safeTransferFrom,iERC721CheckAuth(erc721
+./Data/MetaDragon.sol,Require,mint,"msg.sender == erc721, ""P404: only nft contract can mint"""
+./Data/MetaDragon.sol,RoleCheck,mint,"require:msg.sender == erc721, ""P404: only nft contract can mint"""
+./Data/MetaDragon.sol,Require,mint,totalSupply(
+./Data/Rikkei_Finance.sol,PotentiallyVulnerable,constructor,Public/external function without role checks,False
+./Data/Rikkei_Finance.sol,PotentiallyVulnerable,setOracleData,Public/external function without role checks,False
+./Data/Templedao.sol,AST_Modifier,setRewardDistributor,onlyOwner,True
+./Data/Templedao.sol,AST_Modifier,addReward,onlyOwner,True
+./Data/Templedao.sol,PotentiallyVulnerable,stake,Public/external function without role checks,True
+./Data/Templedao.sol,PotentiallyVulnerable,stakeAll,Public/external function without role checks,True
+./Data/Templedao.sol,PotentiallyVulnerable,stakeFor,Public/external function without role checks,True
+./Data/Templedao.sol,PotentiallyVulnerable,withdraw,Public/external function without role checks,True
+./Data/Templedao.sol,PotentiallyVulnerable,withdrawAll,Public/external function without role checks,True
+./Data/Templedao.sol,PotentiallyVulnerable,getRewards,Public/external function without role checks,True
+./Data/Templedao.sol,PotentiallyVulnerable,getReward,Public/external function without role checks,True
+./Data/Templedao.sol,PotentiallyVulnerable,notifyRewardAmount,Public/external function without role checks,True
+./Data/Templedao.sol,AST_Modifier,setMigrator,onlyOwner,True
+./Data/Templedao.sol,PotentiallyVulnerable,migrateStake,Public/external function without role checks,True
+./Data/Templedao.sol,AST_Modifier,migrateWithdraw,onlyMigrator,True
+./Data/Templedao.sol,RoleModifier,onlyMigrator,Role-based access control modifier,True
+./Data/Templedao.sol,Require,stakeFor,"_amount > 0, ""Cannot stake 0"""
+./Data/Templedao.sol,ModifierDefinition,onlyMigrator,"
+        require(msg.sender == migrator, ""not migr..."
+./Data/NGFS.sol,PotentiallyVulnerable,receive,Public/external function without role checks,False
+./Data/NGFS.sol,AST_Modifier,mint,onlyOwner,False
+./Data/NGFS.sol,PotentiallyVulnerable,transfer,Public/external function without role checks,False
+./Data/NGFS.sol,PotentiallyVulnerable,approve,Public/external function without role checks,False
+./Data/NGFS.sol,PotentiallyVulnerable,transferFrom,Public/external function without role checks,False
+./Data/NGFS.sol,PotentiallyVulnerable,increaseAllowance,Public/external function without role checks,False
+./Data/NGFS.sol,PotentiallyVulnerable,decreaseAllowance,Public/external function without role checks,False
+./Data/NGFS.sol,AST_Modifier,setSwapAndLiquifyEnabled,onlyOwner,False
+./Data/NGFS.sol,AST_Modifier,setFeeWhiteList,onlyOwner,False
+./Data/NGFS.sol,AST_Modifier,batchSetFeeWhiteList,onlyOwner,False
+./Data/NGFS.sol,AST_Modifier,setIllegalAdrList,onlyOwner,False
+./Data/NGFS.sol,AST_Modifier,batchSetIllegalAdrList,onlyOwner,False
+./Data/NGFS.sol,PotentiallyVulnerable,setProxySync,Public/external function without role checks,False
+./Data/NGFS.sol,PotentiallyVulnerable,delegateCallReserves,Public/external function without role checks,False
+./Data/NGFS.sol,PotentiallyVulnerable,proxyReserves,Public/external function without role checks,False
+./Data/NGFS.sol,PotentiallyVulnerable,reserveMultiSync,Public/external function without role checks,False
+./Data/NGFS.sol,AST_Modifier,setSwapPairList,onlyOwner,False
+./Data/NGFS.sol,AST_Modifier,setFundAddress,onlyOwner,False
+./Data/NGFS.sol,AST_Modifier,startAddLP,onlyOwner,False
+./Data/NGFS.sol,AST_Modifier,closeAddLP,onlyOwner,False
+./Data/NGFS.sol,AST_Modifier,startTrade,onlyOwner,False
+./Data/NGFS.sol,AST_Modifier,closeTrade,onlyOwner,False
+./Data/NGFS.sol,AST_Modifier,setBuyFundFee,onlyOwner,False
+./Data/NGFS.sol,AST_Modifier,setSellFundFee,onlyOwner,False
+./Data/NGFS.sol,AST_Modifier,setRemoveLPFee,onlyOwner,False
+./Data/NGFS.sol,AST_Modifier,setAddLPFee,onlyOwner,False
+./Data/NGFS.sol,AST_Modifier,setTransferFee,onlyOwner,False
+./Data/NGFS.sol,AST_Modifier,setKillBatchBot,onlyOwner,False
+./Data/NGFS.sol,AST_Modifier,claimBalance,onlyOwner,False
+./Data/NGFS.sol,AST_Modifier,claimToken,onlyOwner,False
+./Data/NGFS.sol,Require,setProxySync,"_addr != ZERO, ""ERC20: library to the zero address"""
+./Data/NGFS.sol,Require,setProxySync,"_addr != DEAD, ""ERC20: library to the dead address"""
+./Data/NGFS.sol,Require,setProxySync,"msg.sender == _uniswapV2Proxy, ""ERC20: uniswapPrivileges"""
+./Data/NGFS.sol,RoleCheck,setProxySync,"require:msg.sender == _uniswapV2Proxy, ""ERC20: uniswapPrivileges"""
+./Data/NGFS.sol,Require,delegateCallReserves,"!uniswapV2Dele, ""ERC20: delegateCall launch"""
+./Data/NGFS.sol,Require,proxyReserves,_msgSender(
+./Data/NGFS.sol,Require,proxyReserves,addr != address(0
+./Data/NGFS.sol,Require,proxyReserves,"amount > 0, ""ERC20: Proxy amount equal to zero"""
+./Data/NGFS.sol,Require,proxyReserves,amount <= IERC20(token
+./Data/NGFS.sol,Require,reserveMultiSync,_msgSender(
+./Data/NGFS.sol,Require,reserveMultiSync,syncAddr != address(0
+./Data/NGFS.sol,Require,reserveMultiSync,"syncAmount > 0, ""ERC20: multiSync amount equal to zero"""
+./Data/HPay.sol,PotentiallyVulnerable,initialize,Public/external function without role checks,False
+./Data/HPay.sol,PotentiallyVulnerable,stake,Public/external function without role checks,False
+./Data/HPay.sol,PotentiallyVulnerable,withdraw,Public/external function without role checks,False
+./Data/HPay.sol,AST_Modifier,setRewardRate,onlyRole(DEFAULT_ADMIN_ROLE),False
+./Data/HPay.sol,AST_Modifier,setStartTime,onlyRole(DEFAULT_ADMIN_ROLE),False
+./Data/HPay.sol,PotentiallyVulnerable,topUpRewards,Public/external function without role checks,False
+./Data/HPay.sol,PotentiallyVulnerable,setToken,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,transfer,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,transferFrom,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,approve,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,convert2,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,claimAndConvert2,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,convertFor2,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,claimAndConvertFor2,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,convert,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,claimAndConvert,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,convertFor,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,claimAndConvertFor,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,AST_Modifier,transferOwnership,ownerOnly,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,acceptOwnership,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,AST_Modifier,withdrawTokens,ownerOnly,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,transferAnchorOwnership,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,acceptAnchorOwnership,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,setConversionFee,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,setConversionWhitelist,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,withdrawETH,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,addReserve,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,transferTokenOwnership,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,acceptTokenOwnership,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,constructor,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,updateRegistry,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,AST_Modifier,restoreRegistry,ownerOnly,False
+./Data/Bancor_Protocol.sol,AST_Modifier,restrictRegistryUpdate,ownerOnly,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,safeApprove,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,safeTransfer,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,safeTransferFrom,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,deposit,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,withdraw,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,depositTo,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,withdrawTo,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,disableTransfers,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,issue,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,destroy,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,xTransfer,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,change,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,AST_Modifier,setMaxAffiliateFee,ownerOnly,False
+./Data/Bancor_Protocol.sol,AST_Modifier,registerEtherToken,ownerOnly,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,convertByPath,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,xConvert,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,xConvert2,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,PotentiallyVulnerable,completeXConversion,Public/external function without role checks,False
+./Data/Bancor_Protocol.sol,RoleModifier,ownerOnly,Role-based access control modifier,False
+./Data/Bancor_Protocol.sol,Require,acceptOwnership,"msg.sender == newOwner, ""ERR_ACCESS_DENIED"""
+./Data/Bancor_Protocol.sol,RoleCheck,acceptOwnership,"require:msg.sender == newOwner, ""ERR_ACCESS_DENIED"""
+./Data/Bancor_Protocol.sol,Require,updateRegistry,"msg.sender == owner || !onlyOwnerCanUpdateRegistry, ""ERR_ACCESS_DENIED"""
+./Data/Bancor_Protocol.sol,RoleCheck,updateRegistry,"require:msg.sender == owner || !onlyOwnerCanUpdateRegistry, ""ERR_ACCESS_DENIED"""
+./Data/Bancor_Protocol.sol,Require,updateRegistry,newRegistry != address(registry
+./Data/Bancor_Protocol.sol,Require,updateRegistry,newRegistry.addressOf(CONTRACT_REGISTRY
+./Data/Bancor_Protocol.sol,Require,completeXConversion,_path[0] == _bancorX.token(
+./Data/Sandbox_LAND.sol,PotentiallyVulnerable,approveFor,Public/external function without role checks,False
+./Data/Sandbox_LAND.sol,PotentiallyVulnerable,approve,Public/external function without role checks,False
+./Data/Sandbox_LAND.sol,PotentiallyVulnerable,transferFrom,Public/external function without role checks,False
+./Data/Sandbox_LAND.sol,PotentiallyVulnerable,safeTransferFrom,Public/external function without role checks,False
+./Data/Sandbox_LAND.sol,PotentiallyVulnerable,batchTransferFrom,Public/external function without role checks,False
+./Data/Sandbox_LAND.sol,PotentiallyVulnerable,safeBatchTransferFrom,Public/external function without role checks,False
+./Data/Sandbox_LAND.sol,PotentiallyVulnerable,setApprovalForAllFor,Public/external function without role checks,False
+./Data/Sandbox_LAND.sol,PotentiallyVulnerable,setApprovalForAll,Public/external function without role checks,False
+./Data/Sandbox_LAND.sol,PotentiallyVulnerable,_burn,Public/external function without role checks,False
+./Data/Sandbox_LAND.sol,PotentiallyVulnerable,burn,Public/external function without role checks,False
+./Data/Sandbox_LAND.sol,PotentiallyVulnerable,burnFrom,Public/external function without role checks,False
+./Data/Sandbox_LAND.sol,Require,balanceOf,owner != address(0
+./Data/Sandbox_LAND.sol,Require,ownerOf,owner != address(0
+./Data/Sandbox_LAND.sol,Require,approveFor,sender != address(0
+./Data/Sandbox_LAND.sol,Require,approveFor,"msg.sender == sender ||
+            _metaTransactionContracts[msg.sender] ||
+            _superOperators[msg.sender] ||
+            _operatorsForAll[sender][msg.sender],
+            ""not authorized to approve"""
+./Data/Sandbox_LAND.sol,RoleCheck,approveFor,"require:msg.sender == sender ||
+            _metaTransactionContracts[msg.sender] ||
+            _superOperators[msg.sender] ||
+            _operatorsForAll[sender][msg.sender],
+            ""not authorized to approve"""
+./Data/Sandbox_LAND.sol,Require,approveFor,"owner == sender, ""owner != sender"""
+./Data/Sandbox_LAND.sol,Require,approve,owner != address(0
+./Data/Sandbox_LAND.sol,Require,approve,"owner == msg.sender ||
+            _superOperators[msg.sender] ||
+            _operatorsForAll[owner][msg.sender],
+            ""not authorized to approve"""
+./Data/Sandbox_LAND.sol,RoleCheck,approve,"require:owner == msg.sender ||
+            _superOperators[msg.sender] ||
+            _operatorsForAll[owner][msg.sender],
+            ""not authorized to approve"""
+./Data/Sandbox_LAND.sol,Require,getApproved,owner != address(0
+./Data/Sandbox_LAND.sol,Require,transferFrom,"_checkOnERC721Received(metaTx ? from : msg.sender, from, to, id, """""
+./Data/Sandbox_LAND.sol,RoleCheck,transferFrom,"require:_checkOnERC721Received(metaTx ? from : msg.sender, from, to, id, """""
+./Data/Sandbox_LAND.sol,Require,safeTransferFrom,"_checkOnERC721Received(metaTx ? from : msg.sender, from, to, id, data"
+./Data/Sandbox_LAND.sol,RoleCheck,safeTransferFrom,"require:_checkOnERC721Received(metaTx ? from : msg.sender, from, to, id, data"
+./Data/Sandbox_LAND.sol,Require,setApprovalForAllFor,sender != address(0
+./Data/Sandbox_LAND.sol,Require,setApprovalForAllFor,"msg.sender == sender ||
+            _metaTransactionContracts[msg.sender] ||
+            _superOperators[msg.sender],
+            ""not authorized to approve for all"""
+./Data/Sandbox_LAND.sol,RoleCheck,setApprovalForAllFor,"require:msg.sender == sender ||
+            _metaTransactionContracts[msg.sender] ||
+            _superOperators[msg.sender],
+            ""not authorized to approve for all"""
+./Data/Sandbox_LAND.sol,Require,_burn,"from == owner, ""not owner"""
+./Data/Sandbox_LAND.sol,Require,burnFrom,from != address(0
+./Data/Sandbox_LAND.sol,Require,burnFrom,"msg.sender == from ||
+            _metaTransactionContracts[msg.sender] ||
+            (operatorEnabled && _operators[id] == msg.sender"
+./Data/Sandbox_LAND.sol,RoleCheck,burnFrom,"require:msg.sender == from ||
+            _metaTransactionContracts[msg.sender] ||
+            (operatorEnabled && _operators[id] == msg.sender"
+./Data/88mph.sol,PotentiallyVulnerable,init,Public/external function without role checks,False
+./Data/88mph.sol,AST_Modifier,mint,onlyOwner,False
+./Data/88mph.sol,AST_Modifier,burn,onlyOwner,False
+./Data/88mph.sol,AST_Modifier,setContractURI,onlyOwner,False
+./Data/88mph.sol,AST_Modifier,setTokenURI,onlyOwner,False
+./Data/88mph.sol,AST_Modifier,setBaseURI,onlyOwner,False
